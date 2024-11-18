@@ -13,10 +13,45 @@ root.title("A/B калькулятор")
 
 #Добавление метки заголовка
 lblTitle = tk.Label(text="A/B калькулятор", font = ('Helvetica',16,'bold'), fg='#0000cc')
-lblTitle.place(x=55,y=25)
+lblTitle.place(x=55,y=20)
+
+#Добавление метки заголовка контрольной группы
+lblTitle1 = tk.Label(text="Контрольная группа", font = ('Helvetica',12,'bold'), fg='#0066ff')
+lblTitle1.place(x=25,y=55)
+
+#Добавление полей ввода контрольной группы
+lblVisitors1 = tk.Label(text="Посетители:", font = ('Helvetica',10,'bold'))
+lblVisitors1.place(x=25,y=85)
+
+entVisitors1 = tk.Entry(font = ('Helvetica',10,'bold'))
+entVisitors1.place(x=115, y=85, width=90, height=20)
+
+lblConversion1 = tk.Label(text="Конверсии:", font = ('Helvetica',10,'bold'))
+lblConversion1.place(x=25,y=115)
+
+entConversion1 = tk.Entry(font = ('Helvetica',10,'bold'))
+entConversion1.place(x=115, y=115, width=90, height=20)
+
+
+#Добавление метки заголовка тестовой группы
+lblTitle2 = tk.Label(text="Контрольная группа", font = ('Helvetica',12,'bold'), fg='#008800')
+lblTitle2.place(x=25,y=145)
+
+#Добавление полей ввода тестовой группы
+lblVisitors2 = tk.Label(text="Посетители:", font = ('Helvetica',10,'bold'))
+lblVisitors2.place(x=25,y=175)
+
+entVisitors2 = tk.Entry(font = ('Helvetica',10,'bold'))
+entVisitors2.place(x=115, y=175, width=90, height=20)
+
+lblConversion2 = tk.Label(text="Конверсии:", font = ('Helvetica',10,'bold'))
+lblConversion2.place(x=25,y=205)
+
+entConversion2 = tk.Entry(font = ('Helvetica',10,'bold'))
+entConversion2.place(x=115, y=205, width=90, height=20)
 
 #Добавление кнопки Рассчитать
-btnProcess = tk.Button(root, text = "Рассчитать", font = ('Helvetica',10,'bold'),fg='#0000FF')
+btnProcess = tk.Button(root, text = "Рассчитать", font = ('Helvetica',10,'bold'))
 btnProcess.place(x=25, y=250, width=90, height=30)
 
 #Добавление кнопки закрытия программы
