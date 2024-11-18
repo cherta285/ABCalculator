@@ -16,7 +16,6 @@ def popup_window():
     btnClosePopup = tk.Button(window, text = "Закрыть", font = ('Helvetica',10,'bold'), command=window.destroy)
     btnClosePopup.place(x=160, y=250, width=90, height=30)
     
-
 #Создание главного окна
 root = tk.Tk()
 root.geometry("280x300")
@@ -62,7 +61,7 @@ entConversion2 = tk.Entry(font = ('Helvetica',10,'bold'))
 entConversion2.place(x=115, y=205, width=90, height=20)
 
 #Добавление кнопки Рассчитать
-btnProcess = tk.Button(root, text = "Рассчитать", font = ('Helvetica',10,'bold'), command=popup_window)
+btnProcess = tk.Button(root, text = "Рассчитать", font = ('Helvetica',10,'bold'), command=popup_window, fg="#0044CC")
 btnProcess.place(x=25, y=250, width=90, height=30)
 
 #Добавление кнопки закрытия программы
