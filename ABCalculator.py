@@ -42,6 +42,7 @@ def popup_window(n1,c1,n2,c2):
     txtOutput.insert(tk.END,'                            Контрольная     Тестовая' + os.linesep)
     txtOutput.insert(tk.END,'                            группа          группа' + os.linesep)
     txtOutput.insert(tk.END,'----------------------------------------------------' + os.linesep)
+
     
     #Добавление вывода конверсии и стандартного отлонения
     p1=c1/n1
@@ -166,7 +167,7 @@ entConversion1.place(x=115, y=115, width=90, height=20)
 entConversion1.insert(tk.END,'0')
 
 #Добавление метки заголовка тестовой группы
-lblTitle2 = tk.Label(text="Контрольная группа", font = ('Helvetica',12,'bold'), fg='#008800')
+lblTitle2 = tk.Label(text="Тестовая группа", font = ('Helvetica',12,'bold'), fg='#008800')
 lblTitle2.place(x=25,y=145)
 
 #Добавление полей ввода тестовой группы
