@@ -52,7 +52,47 @@ def popup_window(n1,c1,n2,c2):
     sigma2=math.sqrt(p2*(1-p2)/n2)
     txtOutput.insert(tk.END, 'Стандартное отклонение ' + num_percent(sigma1) + '      '+ num_percent(sigma2)+ os.linesep)
     txtOutput.insert(tk.END,'----------------------------------------------------' + os.linesep)
-     
+    
+    #Добавление вывода возможных разбросов
+    z1 = 1.96
+    lower1_95 = p1-z1*sigma1
+    if lower1_95 < 0:
+        lower1_95=0
+    upprel1_95 = p1+z1*sigma1
+    if upprel1_95>1:
+        upprel1_95 = 1
+        
+    lower2_95 = p2-z1*sigma2
+    if lower2_95 < 0:
+        lower2_95=0
+    upprel2_95 = p2+z1*sigma2
+    if upprel2_95>1:
+        upprel2_95 = 1
+    
+    txtOutput.insert(tk.END,'95% возможный разброс  '+os.linesep)
+    txtOutput.insert(tk.END,'                       от '+num_percent(lower1_95)+'    '+ num_percent(lower2_95)+os.linesep)
+    txtOutput.insert(tk.END,'                       до '+num_percent(upprel1_95)+'    '+ num_percent(upprel2_95)+os.linesep)    
+    txtOutput.insert(tk.END,'----------------------------------------------------' + os.linesep)    
+    
+    z2 = 2.575
+    lower1_99 = p1-z2*sigma1
+    if lower1_99 < 0:
+        lower1_99=0
+    upprel1_99 = p1+z2*sigma1
+    if upprel1_99>1:
+        upprel1_99 = 1
+        
+    lower2_99 = p2-z2*sigma2
+    if lower2_99 < 0:
+        lower2_99=0
+    upprel2_99 = p2+z2*sigma2
+    if upprel2_99>1:
+        upprel2_99 = 1
+    
+    txtOutput.insert(tk.END,'99% возможный разброс  '+os.linesep)
+    txtOutput.insert(tk.END,'                       от '+num_percent(lower1_99)+'    '+ num_percent(lower2_99)+os.linesep)
+    txtOutput.insert(tk.END,'                       до '+num_percent(upprel1_99)+'    '+ num_percent(upprel2_99)+os.linesep)    
+    txtOutput.insert(tk.END,'----------------------------------------------------' + os.linesep)    
     
     #Добавление кнопки закрытия окна
     btnClosePopup = tk.Button(window, text = "Закрыть", font = ('Helvetica',10,'bold'), command=window.destroy)
